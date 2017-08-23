@@ -100,6 +100,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
         Label = label,
         Value = value,
         MergeLabels = true,
+
       };
 
     }//CreateInsertOptionValueRequest

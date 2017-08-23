@@ -349,6 +349,12 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
             row.Label1031 = parser["Label1031"];
           if (!string.IsNullOrEmpty(parser["Label1033"]))
             row.Label1033 = parser["Label1033"];
+          if (!string.IsNullOrEmpty(parser["Label1036"]))
+            row.Label1036 = parser["Label1036"];
+          if (!string.IsNullOrEmpty(parser["Label1040"]))
+            row.Label1040 = parser["Label1040"];
+          if (!string.IsNullOrEmpty(parser["Label3082"]))
+            row.Label3082 = parser["Label3082"];
 
           importData.AddImportDataRow(row);
         }//while
@@ -489,6 +495,24 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
                   labels.Add(new KeyValuePair<int, string>(1033, row.Label1033));
                 }//if
 
+                if (!row.IsLabel1036Null() && labels.Any(_ => _.Key == 1036))
+                {
+                  labels.Remove(labels.First(_ => _.Key == 1036));
+                  labels.Add(new KeyValuePair<int, string>(1036, row.Label1036));
+                }//if
+
+                if (!row.IsLabel1040Null() && labels.Any(_ => _.Key == 1040))
+                {
+                  labels.Remove(labels.First(_ => _.Key == 1040));
+                  labels.Add(new KeyValuePair<int, string>(1040, row.Label1040));
+                }//if
+
+                if (!row.IsLabel3082Null() && labels.Any(_ => _.Key == 3082))
+                {
+                  labels.Remove(labels.First(_ => _.Key == 3082));
+                  labels.Add(new KeyValuePair<int, string>(3082, row.Label3082));
+                }//if
+
                 // create insert request
                 multipleRequest.Requests.Add(Helper.CreateUpdateOptionValueRequest(Service,
                   languageCodeOfUser,
@@ -506,6 +530,15 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
 
               if (!row.IsLabel1033Null())
                 labels.Add(new KeyValuePair<int, string>(1033, row.Label1033));
+
+              if (!row.IsLabel1036Null())
+                labels.Add(new KeyValuePair<int, string>(1036, row.Label1036));
+
+              if (!row.IsLabel1040Null())
+                labels.Add(new KeyValuePair<int, string>(1040, row.Label1040));
+
+              if (!row.IsLabel3082Null())
+                labels.Add(new KeyValuePair<int, string>(3082, row.Label3082));
 
               // create insert request
               multipleRequest.Requests.Add(Helper.CreateInsertOptionValueRequest(Service,

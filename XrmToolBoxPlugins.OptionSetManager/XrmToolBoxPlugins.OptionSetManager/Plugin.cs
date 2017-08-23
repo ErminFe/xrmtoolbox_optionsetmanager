@@ -15,7 +15,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
   ExportMetadata("SecondaryFontColor", "LightGray"),
   ExportMetadata("SmallImageBase64", null),
   ExportMetadata("BigImageBase64", null),
-  ExportMetadata("Name", "OptionSetManager"),
+  ExportMetadata("Name", "OptionSet Manager"),
   ExportMetadata("Description", "Enables the manipulation of option sets in a bulk fashion.")]
   public class Plugin : PluginBase
   {

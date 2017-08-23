@@ -281,9 +281,15 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             
             private global::System.Data.DataColumn columnValue;
             
+            private global::System.Data.DataColumn columnLabel1031;
+            
             private global::System.Data.DataColumn columnLabel1033;
             
-            private global::System.Data.DataColumn columnLabel1031;
+            private global::System.Data.DataColumn columnLabel1036;
+            
+            private global::System.Data.DataColumn columnLabel1040;
+            
+            private global::System.Data.DataColumn columnLabel3082;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -328,6 +334,14 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Label1031Column {
+                get {
+                    return this.columnLabel1031;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Label1033Column {
                 get {
                     return this.columnLabel1033;
@@ -336,9 +350,25 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Label1031Column {
+            public global::System.Data.DataColumn Label1036Column {
                 get {
-                    return this.columnLabel1031;
+                    return this.columnLabel1036;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Label1040Column {
+                get {
+                    return this.columnLabel1040;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Label3082Column {
+                get {
+                    return this.columnLabel3082;
                 }
             }
             
@@ -379,12 +409,15 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ImportDataRow AddImportDataRow(int Value, string Label1033, string Label1031) {
+            public ImportDataRow AddImportDataRow(int Value, string Label1031, string Label1033, string Label1036, string Label1040, string Label3082) {
                 ImportDataRow rowImportDataRow = ((ImportDataRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Value,
+                        Label1031,
                         Label1033,
-                        Label1031};
+                        Label1036,
+                        Label1040,
+                        Label3082};
                 rowImportDataRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowImportDataRow);
                 return rowImportDataRow;
@@ -415,8 +448,11 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnValue = base.Columns["Value"];
-                this.columnLabel1033 = base.Columns["Label1033"];
                 this.columnLabel1031 = base.Columns["Label1031"];
+                this.columnLabel1033 = base.Columns["Label1033"];
+                this.columnLabel1036 = base.Columns["Label1036"];
+                this.columnLabel1040 = base.Columns["Label1040"];
+                this.columnLabel3082 = base.Columns["Label3082"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -424,10 +460,16 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             private void InitClass() {
                 this.columnValue = new global::System.Data.DataColumn("Value", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnValue);
-                this.columnLabel1033 = new global::System.Data.DataColumn("Label1033", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLabel1033);
                 this.columnLabel1031 = new global::System.Data.DataColumn("Label1031", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLabel1031);
+                this.columnLabel1033 = new global::System.Data.DataColumn("Label1033", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLabel1033);
+                this.columnLabel1036 = new global::System.Data.DataColumn("Label1036", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLabel1036);
+                this.columnLabel1040 = new global::System.Data.DataColumn("Label1040", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLabel1040);
+                this.columnLabel3082 = new global::System.Data.DataColumn("Label3082", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLabel3082);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnValue}, true));
                 this.columnValue.AllowDBNull = false;
@@ -585,22 +627,6 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Label1033 {
-                get {
-                    try {
-                        return ((string)(this[this.tableImportData.Label1033Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Label1033\' in table \'ImportData\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableImportData.Label1033Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Label1031 {
                 get {
                     try {
@@ -617,14 +643,66 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLabel1033Null() {
-                return this.IsNull(this.tableImportData.Label1033Column);
+            public string Label1033 {
+                get {
+                    try {
+                        return ((string)(this[this.tableImportData.Label1033Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Label1033\' in table \'ImportData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableImportData.Label1033Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLabel1033Null() {
-                this[this.tableImportData.Label1033Column] = global::System.Convert.DBNull;
+            public string Label1036 {
+                get {
+                    try {
+                        return ((string)(this[this.tableImportData.Label1036Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Label1036\' in table \'ImportData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableImportData.Label1036Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Label1040 {
+                get {
+                    try {
+                        return ((string)(this[this.tableImportData.Label1040Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Label1040\' in table \'ImportData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableImportData.Label1040Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Label3082 {
+                get {
+                    try {
+                        return ((string)(this[this.tableImportData.Label3082Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Label3082\' in table \'ImportData\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableImportData.Label3082Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -637,6 +715,54 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager.Data {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetLabel1031Null() {
                 this[this.tableImportData.Label1031Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLabel1033Null() {
+                return this.IsNull(this.tableImportData.Label1033Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLabel1033Null() {
+                this[this.tableImportData.Label1033Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLabel1036Null() {
+                return this.IsNull(this.tableImportData.Label1036Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLabel1036Null() {
+                this[this.tableImportData.Label1036Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLabel1040Null() {
+                return this.IsNull(this.tableImportData.Label1040Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLabel1040Null() {
+                this[this.tableImportData.Label1040Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLabel3082Null() {
+                return this.IsNull(this.tableImportData.Label3082Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLabel3082Null() {
+                this[this.tableImportData.Label3082Column] = global::System.Convert.DBNull;
             }
         }
         
