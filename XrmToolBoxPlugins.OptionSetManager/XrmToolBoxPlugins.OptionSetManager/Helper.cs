@@ -90,7 +90,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       KeyValuePair<int, string> userLanguageLabel = labels.Where(_ => _.Key == userLanguageCode).FirstOrDefault();
 
       Label label = new Label(new LocalizedLabel(labels.Where(_ => _.Key == userLanguageCode).Select(_ => _.Value).FirstOrDefault(), userLanguageCode),
-         labels.Where(_ => _.Key != userLanguageCode).Select(_ => new LocalizedLabel(_.Value, _.Key)).ToArray());
+         labels.Select(_ => new LocalizedLabel(_.Value, _.Key)).ToArray());
 
       // Create a request.
       return new UpdateOptionValueRequest

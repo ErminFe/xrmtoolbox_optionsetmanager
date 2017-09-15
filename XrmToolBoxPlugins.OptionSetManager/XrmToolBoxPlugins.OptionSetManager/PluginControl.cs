@@ -106,7 +106,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // groupBox1
       // 
-      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.groupBox1.Controls.Add(this.btnSample);
       this.groupBox1.Controls.Add(this.btnLoad);
@@ -161,7 +161,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // txtImportFile
       // 
-      this.txtImportFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+      this.txtImportFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.txtImportFile.Location = new System.Drawing.Point(82, 104);
       this.txtImportFile.Name = "txtImportFile";
@@ -190,7 +190,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // cmbOptionSet
       // 
-      this.cmbOptionSet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+      this.cmbOptionSet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.cmbOptionSet.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
       this.cmbOptionSet.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
@@ -211,7 +211,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // cmbEntity
       // 
-      this.cmbEntity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+      this.cmbEntity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.cmbEntity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
       this.cmbEntity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
@@ -248,7 +248,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // txtResult
       // 
-      this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+      this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.txtResult.Enabled = false;
       this.txtResult.Location = new System.Drawing.Point(19, 503);
@@ -263,8 +263,8 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // groupBox2
       // 
-      this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+      this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.groupBox2.Controls.Add(this.grdValues);
       this.groupBox2.Location = new System.Drawing.Point(19, 201);
@@ -278,8 +278,8 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       this.grdValues.AllowUserToAddRows = false;
       this.grdValues.AllowUserToDeleteRows = false;
-      this.grdValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+      this.grdValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
       this.grdValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
       this.grdValues.Location = new System.Drawing.Point(17, 32);
@@ -333,7 +333,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       {
         parser.SetDataSource(txtImportFile.Text);
 
-        parser.ColumnDelimiter = ',';
+        parser.ColumnDelimiter = ';';
         parser.FirstRowHasHeader = true;
         parser.SkipStartingDataRows = 0;
         parser.MaxBufferSize = 4096;
@@ -346,15 +346,36 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
 
           row.Value = int.Parse(parser["Value"]);
           if (!string.IsNullOrEmpty(parser["Label1031"]))
+          {
             row.Label1031 = parser["Label1031"];
+            if (!string.IsNullOrEmpty(row.Label1031))
+              row.Label1031 = row.Label1031.Replace("\"", string.Empty).Trim();
+          }
           if (!string.IsNullOrEmpty(parser["Label1033"]))
+          {
             row.Label1033 = parser["Label1033"];
+            if (!string.IsNullOrEmpty(row.Label1033))
+              row.Label1033 = row.Label1033.Replace("\"", string.Empty).Trim();
+          }
           if (!string.IsNullOrEmpty(parser["Label1036"]))
+          {
             row.Label1036 = parser["Label1036"];
+            if (!string.IsNullOrEmpty(row.Label1036))
+              row.Label1036 = row.Label1036.Replace("\"", string.Empty).Trim();
+          }
           if (!string.IsNullOrEmpty(parser["Label1040"]))
+          {
             row.Label1040 = parser["Label1040"];
+            if (!string.IsNullOrEmpty(row.Label1040))
+              row.Label1040 = row.Label1040.Replace("\"", string.Empty).Trim();
+          }
           if (!string.IsNullOrEmpty(parser["Label3082"]))
+          {
             row.Label3082 = parser["Label3082"];
+            if (!string.IsNullOrEmpty(row.Label3082))
+              row.Label3082 = row.Label3082.Replace("\"", string.Empty).Trim();
+          }
+
 
           importData.AddImportDataRow(row);
         }//while
@@ -426,10 +447,12 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
               }
             }
           }).Entities.FirstOrDefault();
-          if (userSettings != null && userSettings.Contains("uilanguageid"))
-          {
-            languageCodeOfUser = userSettings.GetAttributeValue<int>("uilanguageid");
-          }
+          //if (userSettings != null && userSettings.Contains("uilanguageid"))
+          //{
+          //  languageCodeOfUser = userSettings.GetAttributeValue<int>("uilanguageid");
+          //}
+
+          languageCodeOfUser = 1033;
         },
         ProgressChanged = e =>
         {
@@ -468,7 +491,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
           multipleRequest.Settings.ContinueOnError = false;
           multipleRequest.Settings.ReturnResponses = true;
           multipleRequest.Requests = new OrganizationRequestCollection();
-          
+
           foreach (Model.ImportDataRow row in importData)
           {
             if (existingOptions.Any(_ => _.Value == row.Value))
