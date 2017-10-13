@@ -613,11 +613,12 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       {
         using (StreamWriter writer = new StreamWriter(dlgFileSave.OpenFile()))
         {
-          writer.WriteLine(@"""Value"",""Label1031"",""Label1033""");
-          writer.WriteLine(@"""123100"",""A"",""a""");
-          writer.WriteLine(@"""123101"",""B"",""b""");
-          writer.WriteLine(@"""123102"",""C"",""c""");
-          writer.WriteLine(@"""123103"",""D"",""d""");
+          writer.WriteLine(@"""Value"";""Label1031"";""Label1033"";""Label1036"";""Label1040"";""Label3082""");
+          writer.WriteLine(@"""123100"";""a"";""b"";""c"";""d"";""e"";");
+          writer.WriteLine(@"""123101"";""a"";""b"";""c"";""d"";""e"";");
+          writer.WriteLine(@"""123102"";""a"";""b"";""c"";""d"";""e"";");
+          writer.WriteLine(@"""123103"";""a"";""b"";""c"";""d"";""e"";");
+          writer.WriteLine(@"""123104"";""a"";""b"";""c"";""d"";""e"";");
         }//using
       }
 
