@@ -106,7 +106,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // groupBox1
       // 
-      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+      this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.groupBox1.Controls.Add(this.btnSample);
       this.groupBox1.Controls.Add(this.btnLoad);
@@ -161,7 +161,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // txtImportFile
       // 
-      this.txtImportFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+      this.txtImportFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.txtImportFile.Location = new System.Drawing.Point(82, 104);
       this.txtImportFile.Name = "txtImportFile";
@@ -190,7 +190,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // cmbOptionSet
       // 
-      this.cmbOptionSet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+      this.cmbOptionSet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.cmbOptionSet.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
       this.cmbOptionSet.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
@@ -211,7 +211,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // cmbEntity
       // 
-      this.cmbEntity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+      this.cmbEntity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.cmbEntity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
       this.cmbEntity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
@@ -248,7 +248,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // txtResult
       // 
-      this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+      this.txtResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.txtResult.Enabled = false;
       this.txtResult.Location = new System.Drawing.Point(19, 503);
@@ -263,8 +263,8 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // groupBox2
       // 
-      this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+      this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.groupBox2.Controls.Add(this.grdValues);
       this.groupBox2.Location = new System.Drawing.Point(19, 201);
@@ -278,8 +278,8 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       this.grdValues.AllowUserToAddRows = false;
       this.grdValues.AllowUserToDeleteRows = false;
-      this.grdValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+      this.grdValues.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
       this.grdValues.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
       this.grdValues.Location = new System.Drawing.Point(17, 32);
@@ -290,7 +290,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
       // 
       // btnImport
       // 
-      this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+      this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
       this.btnImport.Location = new System.Drawing.Point(273, 474);
       this.btnImport.Name = "btnImport";
       this.btnImport.Size = new System.Drawing.Size(75, 23);
@@ -608,7 +608,7 @@ namespace smartpoint.XrmToolBoxPlugins.OptionSetManager
     private void btnSample_Click(object sender, EventArgs e)
     {
       dlgFileSave.FileName = "sample.csv";
-      dlgFileSave.Filter = "Comma Separated File | *.csv";
+      dlgFileSave.Filter = "Semicolon Separated File | *.csv";
       if (DialogResult.OK == dlgFileSave.ShowDialog())
       {
         using (StreamWriter writer = new StreamWriter(dlgFileSave.OpenFile()))
